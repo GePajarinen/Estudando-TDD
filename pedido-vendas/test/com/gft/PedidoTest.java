@@ -16,9 +16,13 @@ public class PedidoTest {
 	}
 	
 	private void assertResumoPedido(double valorTotal, double desconto) {
-		ResumoPedido rp = pedido.construir().resumo();
-		assertEquals(valorTotal, rp.getValorTotal(), 0.0001);//0.0001 -> margem de erro
-		assertEquals(desconto, rp.getDesconto(), 0.0001);
+		ResumoPedido resumoPedido = pedido.construir().resumo();
+		//assertEquals(valorTotal, rp.getValorTotal(), 0.0001);//0.0001 -> margem de erro
+		//assertEquals(desconto, rp.getDesconto(), 0.0001);
+		
+		//Como as duas assertEquals estão relacionadas entre si, pode-se 
+		//resumir em uma assertEquals:
+		assertEquals(new ResumoPedido(valorTotal, desconto), resumoPedido);
 	}
 	
 	
