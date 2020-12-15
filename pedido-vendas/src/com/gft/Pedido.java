@@ -18,12 +18,21 @@ public class Pedido {
 		this.cd = cd;
 	}
 	
+	
+	private void validarQuantidadeItens(ItemPedido itemPedido) {
+		if (itemPedido.getQuantidade() < 0)
+			throw new QuantidadeItensInvalidaException();
+	}
+	
+	
 	public void adicionarItem(ItemPedido itemPedido) {
+		validarQuantidadeItens(itemPedido);
+		
 		itens.add(itemPedido);
 	}
 
+	
 	public ResumoPedido resumo() {
-		
 		double valorTotal = itens.stream().mapToDouble(i -> i.getValor() * i.getQuantidade()).sum();
 		double desconto = cd.desconto(valorTotal);
 		

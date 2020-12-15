@@ -1,6 +1,6 @@
 package com.gft;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -82,5 +82,12 @@ public class PedidoTest {
 		
 		assertResumoPedido(1200.0, 96.0);
 	}
+	
+	//Testando Exceções
+	@Test(expected =QuantidadeItensInvalidaException.class)
+	public void naoAceitarPedidosComItensDeQuantidadeNegativa() throws Exception {
+		pedido.comItem(0.0,  -10);
+	}
+	
 	
 }
