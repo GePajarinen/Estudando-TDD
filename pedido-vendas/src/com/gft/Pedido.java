@@ -4,12 +4,20 @@ package com.gft;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.gft.deconto.CalculadoraDesconto;
+
 
 
 public class Pedido {
 	
 	private List<ItemPedido> itens = new ArrayList<>();
-
+	
+	private CalculadoraDesconto cd;
+	
+	public Pedido(CalculadoraDesconto cd) {
+		this.cd = cd;
+	}
+	
 	public void adicionarItem(ItemPedido itemPedido) {
 		itens.add(itemPedido);
 	}
@@ -17,15 +25,7 @@ public class Pedido {
 	public ResumoPedido resumo() {
 		
 		double valorTotal = itens.stream().mapToDouble(i -> i.getValor() * i.getQuantidade()).sum();
-		double desconto =0;
-		
-		if(valorTotal >300.0 && valorTotal <= 800.0){
-			desconto = valorTotal * 0.04;
-		}else if(valorTotal > 800.0 && valorTotal <=1000.00 ) {
-			desconto = valorTotal * 0.06;
-		}else if (valorTotal >1000.0){
-			desconto = valorTotal * 0.08;
-		}
+		double desconto = cd.desconto(valorTotal);
 		
 		return new ResumoPedido(valorTotal, desconto);
 	}
