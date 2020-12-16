@@ -1,28 +1,29 @@
 package com.gft.tdd.service;
 
-import com.gft.tdd.email.NotificadorEmail;
+import java.util.List;
+
 import com.gft.tdd.model.Pedido;
-import com.gft.tdd.repository.Pedidos;
-import com.gft.tdd.sms.NotificadorSms;
 
 public class PedidoService {
 
-	private Pedidos pedidos;
-	private NotificadorEmail notificadorEmail;
-	private NotificadorSms notificadorSms;
+	private List<AcaoLancamentoPedido> acoes;
 	
-	public PedidoService(Pedidos pedidos, NotificadorEmail notificadorEmail, NotificadorSms notificadorSms) {
-		this.pedidos = pedidos;
-		this.notificadorEmail = notificadorEmail;
-		this.notificadorSms = notificadorSms;
+	public PedidoService(List<AcaoLancamentoPedido> acoes) {
+		this.acoes = acoes;
 	}
 
 	public double lancar(Pedido pedido) {
 		double imposto =  pedido.getValor() * 0.1;
 		
-		pedidos.guardar(pedido);
-		notificadorEmail.enviar(pedido);
-		notificadorSms.notificar(pedido);
+		//JAVA 8:
+		acoes.forEach(a -> a.executar(pedido));
+		
+		/*
+		for (AcaoLancamentoPedido acao : acoes) {
+			acao.executar(pedido);
+		}
+		*/
+		
 		return imposto;
 	}
 
