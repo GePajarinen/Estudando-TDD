@@ -112,13 +112,14 @@ public class VeiculoFuncionandoTest {
 		assertEquals("Desligando o carro...","Desligando o carro...");
 	}
 	
+	
 	@Test
 	public void deveDesligarOCarroQueEstaAndando() throws Exception {
 		v.setIsLigado(true);
-		v.setVelocidade(20);
+		v.setVelocidade(40);
 		
 		vf.desligar(v);
 		
-		assertEquals("Reduzindo a velocidade para 0 Km/h. Desligando o carro...","Reduzindo a velocidade para 0 Km/h. Desligando o carro...");
+		assertEquals("Desligando o carro...","Desligando o carro...");
 	}
 }

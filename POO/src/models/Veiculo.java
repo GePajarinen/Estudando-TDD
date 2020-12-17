@@ -1,29 +1,29 @@
 package models;
 
 public class Veiculo {
-	//Atributos
+
 	private String marca, modelo, placa, cor;
 	private float km;
 	private boolean isLigado;
 	private int litrosCombustivel, velocidade;
 	private Double preco;
 
-	
-	public Veiculo(String mrc, String mdl, String plc, String c,
-float k, boolean isLig, int ltro, int veloc, Double p){
-	
-	this.marca = mrc;
-	this.modelo = mdl; 
-	this.placa = plc; 
-	this.cor = c;
-	this.km = k;
-	this.isLigado = isLig;
-	this.litrosCombustivel = ltro; 
-	this.velocidade = veloc;
-	this.preco = p;
-	}
 
-	//MARCA
+	public Veiculo(String marca, String modelo, String placa, String cor, float km, boolean isLigado,
+			int litrosCombustivel, int velocidade, Double preco) {
+		super();
+		this.marca = marca;
+		this.modelo = modelo;
+		this.placa = placa;
+		this.cor = cor;
+		this.km = km;
+		this.isLigado = isLigado;
+		this.litrosCombustivel = litrosCombustivel;
+		this.velocidade = velocidade;
+		this.preco = preco;
+	}
+	
+	
 	public void setMarca(String marca){
 		this.marca = marca;
 	}
@@ -31,7 +31,6 @@ float k, boolean isLig, int ltro, int veloc, Double p){
 		return marca;
 	}
 
-	//MODELO
 	public void setModelo(String modelo){
 		this.modelo = modelo;
 	}
@@ -39,7 +38,6 @@ float k, boolean isLig, int ltro, int veloc, Double p){
 		return modelo;
 	}
 	
-	//PLACA
 	public void setPlaca(String placa){
 		this.placa = placa;
 	}
@@ -47,7 +45,6 @@ float k, boolean isLig, int ltro, int veloc, Double p){
 		return placa;
 	}
 	
-	//COR
 	public void setCor(String cor){
 		this.cor = cor;
 	}
@@ -55,7 +52,6 @@ float k, boolean isLig, int ltro, int veloc, Double p){
 		return cor;
 	}
 	
-	//KM
 	public void setKm(Float km){
 		this.km = km;
 	}
@@ -63,7 +59,6 @@ float k, boolean isLig, int ltro, int veloc, Double p){
 		return km;
 	}
 	
-	//ESTA LIGADO
 	public void setIsLigado(Boolean isLigado){
 		this.isLigado = isLigado;
 	}
@@ -71,7 +66,6 @@ float k, boolean isLig, int ltro, int veloc, Double p){
 		return isLigado;
 	}
 	
-	//LITROS COMBUSTIVEL
 	public void setLitrosCombustivel(int litrosCombustivel){
 		this.litrosCombustivel = litrosCombustivel;
 	}
@@ -79,7 +73,6 @@ float k, boolean isLig, int ltro, int veloc, Double p){
 		return litrosCombustivel;
 	}
 	
-	// VELOCIDADE
 	public void setVelocidade(int velocidade){
 		this.velocidade = velocidade;
 	}
@@ -87,14 +80,11 @@ float k, boolean isLig, int ltro, int veloc, Double p){
 		return velocidade;
 	}
 	
-	//PRECO
 	public void setPreco(Double preco){
 		this.preco = preco;
 	}
 	public double getPreco(){
 		return preco;
 	}
-	
-	
 
 }
