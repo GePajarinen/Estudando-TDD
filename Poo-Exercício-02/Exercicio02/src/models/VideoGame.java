@@ -6,22 +6,6 @@ public class VideoGame extends Produto implements Imposto{
     private boolean isUsado;
 
 
-    public double calcularImposto(){
-		//1. Se o vídeo game for usado, calcular imposto de 25% sobre o preço do videogame.
-		//2. Se o vídeo game não for usado, calcular imposto de 45% sobre o preço do videogame.
-		
-		double imposto_pagar;
-
-		if(this.isUsado){
-			imposto_pagar = this.getPreco()* 0.25;
-		}
-		else{
-			imposto_pagar = this.getPreco()* 0.45;;
-		}
-	
-        return imposto_pagar;
-    }
-	
     public VideoGame(String n, double p, int q, String mrc, String mdlo, boolean usado){
         super(n,p, q);//reusing parent constructor 
         this.marca = mrc;
@@ -29,6 +13,17 @@ public class VideoGame extends Produto implements Imposto{
 		this.isUsado = usado; 
 	}
 
+    @Override
+    public double calcularImposto() {
+    	//1. Se o vídeo game for usado, calcular imposto de 25% sobre o preço do videogame.
+    	//2. Se o vídeo game não for usado, calcular imposto de 45% sobre o preço do videogame.
+		if(this.isUsado){
+			return this.getPreco()* 0.25;
+		}
+		else{
+			return this.getPreco()* 0.45;
+		}
+    }
 
 	public void setMarca(String marca){
 		this.marca = marca;
@@ -51,7 +46,5 @@ public class VideoGame extends Produto implements Imposto{
 		return isUsado;
 	}
 
-	
-	
     
 }
