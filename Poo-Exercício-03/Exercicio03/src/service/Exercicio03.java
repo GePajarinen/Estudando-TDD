@@ -15,7 +15,7 @@ public class Exercicio03 {
 		 
 		 Persona persona = new Persona();
 		 
-		 List<String> magiasMago1 = new ArrayList();
+		 List<String> magiasMago1 = new ArrayList<String>();
 		 magiasMago1.add("Varinha mágica");
 		
 		 Mago mago1 = new Mago("Sininho", 1, 1, 1, 1, 1, 1, magiasMago1);
@@ -32,7 +32,7 @@ public class Exercicio03 {
 
 		System.out.println("\n\n-----------------\n");
 		
-		List<String> habilidadesGuerreiro1 = new ArrayList();
+		List<String> habilidadesGuerreiro1 = new ArrayList<String>();
 		habilidadesGuerreiro1.add("Martela o martelão");
 		Guerreiro guerreiro1 = new Guerreiro("Thor", 1, 1, 1, 1, 1, 1, habilidadesGuerreiro1);
 		    

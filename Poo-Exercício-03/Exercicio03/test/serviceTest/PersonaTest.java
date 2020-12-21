@@ -22,11 +22,11 @@ public class PersonaTest {
 	public void setUp() {
 		persona = new Persona();
 		
-		List<String> magiasMago = new ArrayList();
+		List<String> magiasMago = new ArrayList<String>();
 		magiasMago.add("Varinha mágica");
 		mago = new Mago("Sininho", 1, 1, 1, 1, 1, 1, magiasMago);
 		 
-		List<String> habilidadesGuerreiro = new ArrayList();
+		List<String> habilidadesGuerreiro = new ArrayList<String>();
 		habilidadesGuerreiro.add("Martela o martelão");
 		guerreiro = new Guerreiro("Thor", 1, 1, 1, 1, 1, 1, habilidadesGuerreiro);
 	}
