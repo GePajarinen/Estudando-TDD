@@ -53,5 +53,19 @@ public class MagoTest {
 		assertEquals(3, mago.getForca());
 		
 	}
+	
+	@Test
+	public void testandoAprenderMagia() throws Exception {
+		mago.aprenderMagia("Floresta Negra");
+		
+		assertTrue(mago.getMagias().contains("Floresta Negra"));
+		assertEquals(2, mago.getMagias().size());
+	}
 
+	@Test
+	public void testandoAlistagemDeMagias() throws Exception {
+		String s1 = "Varinha mágica | ";
+		
+		assertEquals(s1, mago.listaDeMagias());
+	}
 }

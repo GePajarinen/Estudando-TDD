@@ -9,6 +9,7 @@ public class Mago extends Personagem {
 	public Mago(String nome, int vida, int mana, float xp, int inteligencia, int forca, int level, List<String> magias) {
 		super(nome, vida, mana, xp, inteligencia, forca, level);
 		this.magias = magias;
+		
 	}
 	
 	//LEVEL UP
@@ -34,10 +35,16 @@ public class Mago extends Personagem {
 	
 	
 	//LISTA DE MAGIAS
-    public void listaDeMagias(){
+    public String listaDeMagias(){
         System.out.format("\nLista de Magias: ");
-  
-        magias.forEach(m -> System.out.format("%s | ", m));
+
+        //magias.forEach(m -> System.out.format("%s | ", m));
+        
+        String s = "";
+        for (String magia : magias) {
+        	s = s+ magia + " | ";
+        }
+        return s;
     }
 	
 	

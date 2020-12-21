@@ -1,6 +1,6 @@
 package serviceTest;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,21 @@ public class GuerreiroTest {
 		assertEquals(3, guerreiro.getMana());
 		assertEquals(3, guerreiro.getInteligencia());
 		assertEquals(23, guerreiro.getForca());
+	}
+	
+	@Test
+	public void testandoAprenderHabilidade() throws Exception {
+		guerreiro.aprenderHabilidade("Dança do Tigrão");
 		
+		assertTrue(guerreiro.getHabilidades().contains("Dança do Tigrão"));
+		assertEquals(2, guerreiro.getHabilidades().size());
+	}
+	
+	@Test
+	public void testandoAlistagemDeHabilidades() throws Exception {
+		String s1 = "Martela o martelão | ";
+		
+		assertEquals(s1, guerreiro.listaDeHabilidades());
 	}
 
 

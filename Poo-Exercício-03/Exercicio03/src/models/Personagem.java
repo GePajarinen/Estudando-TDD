@@ -11,9 +11,6 @@ public abstract class Personagem {
 	private int level;
 	
 	private static int totalDePersonagensCriados = 0;
-	public Personagem(){
-		Personagem.totalDePersonagensCriados++;
-	}
 	
 	public Personagem(String nome, int vida, int mana, float xp, int inteligencia, int forca, int level) {
 		super();
@@ -24,7 +21,7 @@ public abstract class Personagem {
 		this.inteligencia = inteligencia;
 		this.forca = forca;
 		this.level = level;
-		
+		Personagem.totalDePersonagensCriados++;
 	}
 	
 	

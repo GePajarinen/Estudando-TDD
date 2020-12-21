@@ -48,10 +48,9 @@ public class Exercicio03 {
 		
 		System.out.println();
 		//Quantidade de Personagens craidos:
+		System.out.println("//Quantidade de Personagens craidos:");
 		System.out.println(Personagem.getTotalDePersonagensCriados());
 		
-		   
-
-		  }
+		}
 	 
 }

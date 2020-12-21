@@ -34,10 +34,16 @@ public class Guerreiro extends Personagem {
 	}
 	
 	//LISTA DE HABILIDADES
-    public void listaDeHabilidades(){
+    public String listaDeHabilidades(){
         System.out.format("\nLista de Habilidades: ");
   
-        habilidades.forEach(h -> System.out.format("%s | ", h));
+        //habilidades.forEach(h -> System.out.format("%s | ", h));
+        
+        String s = "";
+        for (String habilidade : habilidades) {
+        	s = s+ habilidade + " | ";
+        }
+        return s;
     }
     
     

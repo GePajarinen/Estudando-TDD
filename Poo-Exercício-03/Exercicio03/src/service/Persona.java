@@ -17,7 +17,7 @@ public class Persona {
 	    System.out.format("Força: %d\n",p.getForca());
 	    System.out.format("Level: %d\n",p.getLevel());
 	    System.out.format("Xp: %.2f\n",p.getXp());
-	    p.listaDeMagias();
+	    System.out.println(p.listaDeMagias());
     }
     
     //Imprimir Guerreiro
@@ -30,6 +30,6 @@ public class Persona {
 	    System.out.format("Força: %d\n",p.getForca());
 	    System.out.format("Level: %d\n",p.getLevel());
 	    System.out.format("Xp: %.2f\n",p.getXp());
-	    p.listaDeHabilidades();;
+	    System.out.println(p.listaDeHabilidades());
     }
 }
