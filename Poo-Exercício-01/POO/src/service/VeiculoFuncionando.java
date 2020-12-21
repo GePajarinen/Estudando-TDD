@@ -18,11 +18,12 @@ public class VeiculoFuncionando {
 		int totalDeLitros = veiculo.getLitrosCombustivel() + litros;
 		
 		if (totalDeLitros > 60){
-			System.out.format("\nSeu tanque está com %dL dos 60L de capacidade.\nVocê pode abastecer no máximo %dL.\n", veiculo.getLitrosCombustivel(), 60 - veiculo.getLitrosCombustivel());
+			System.out.format("\nSeu tanque está com %dL dos 60L de capacidade.\nVocê pode abastecer no máximo %dL.\n", 
+					veiculo.getLitrosCombustivel(), 60 - veiculo.getLitrosCombustivel());
 		}
 		else{
+			veiculo.setLitrosCombustivel(totalDeLitros);
 			System.out.format("\nOk. Agora seu tanque está com %dL dos 60L da capacidade.\n", totalDeLitros);
-			//#Dava pra fazer um lance de porcentagem
 		}
 	}
 	

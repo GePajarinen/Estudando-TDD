@@ -32,15 +32,14 @@ public class VeiculoFuncionandoTest {
 	public void deveAabastecerOVeiculoMenosOuIgualACapacidadeMaximaDoTanque() throws Exception {
 		vf.abastecer(v, 10);
 		
-		assertEquals(40, v.getLitrosCombustivel());
+		assertEquals(50, v.getLitrosCombustivel());
 	}
 	
 	@Test 
 	public void deveAabastecerOVeiculoAcimaDaCapacidadeMaximaDoTanque() throws Exception {
 		vf.abastecer(v, 30);
 		
-		assertEquals("Seu tanque está com 40L dos 60L de capacidade. Você pode abastecer no máximo 20L.", 
-				"Seu tanque está com 40L dos 60L de capacidade. Você pode abastecer no máximo 20L.");
+		assertEquals(70, v.getLitrosCombustivel()+30);
 		
 	}
 	
