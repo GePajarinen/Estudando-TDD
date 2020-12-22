@@ -24,7 +24,7 @@ public class Exercicio03 {
 		 persona.personaMago(mago1);
 
 		    mago1.aprenderMagia("Pedra filosofal");
-		    mago1.attack();
+		    System.out.println("\n"+mago1.getNome()+" ataca com " + mago1.attack() + " power.\n");
 		    mago1.lvlUp();
 
 		 System.out.println("\n ********* DEPOIS DO LEVEL UP ********* ");
@@ -40,13 +40,14 @@ public class Exercicio03 {
 		persona.personaGuerreiro(guerreiro1);
 		   
 		    guerreiro1.aprenderHabilidade("Lançar raios");
-		    guerreiro1.attack();
+		    System.out.println("\n"+ guerreiro1.getNome()+" ataca com " + guerreiro1.attack() + " power.\n");
 		    guerreiro1.lvlUp();
 
 		System.out.println("\n ********* DEPOIS DO LEVEL UP ********* ");
 		persona.personaGuerreiro(guerreiro1); 
 		
 		System.out.println();
+		
 		//Quantidade de Personagens craidos:
 		System.out.println("//Quantidade de Personagens craidos:");
 		System.out.println(Personagem.getTotalDePersonagensCriados());

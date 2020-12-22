@@ -68,6 +68,11 @@ public class GuerreiroTest {
 		
 		assertEquals(s1, guerreiro.listaDeHabilidades());
 	}
+	
+	@Test
+	public void tesntandoOAttack() throws Exception {
+		assertTrue(guerreiro.attack()!=0);
+	}
 
 
 }

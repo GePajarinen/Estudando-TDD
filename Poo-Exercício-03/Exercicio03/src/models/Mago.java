@@ -21,10 +21,8 @@ public class Mago extends Personagem {
 	}
 	
 	//ATTACK
-	public void attack(){
-        int atacando = (this.getInteligencia() * this.getLevel()) + (0 + (int)(Math.random()*300));
-        
-        System.out.println("\n"+this.getNome()+" ataca com " + atacando + " power.\n");
+	public int attack(){
+        return (this.getInteligencia() * this.getLevel()) + (0 + (int)(Math.random()*300));
     }
 	
 	

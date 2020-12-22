@@ -68,4 +68,9 @@ public class MagoTest {
 		
 		assertEquals(s1, mago.listaDeMagias());
 	}
+	
+	@Test
+	public void tesntandoOAttack() throws Exception {
+		assertTrue(mago.attack()!=0);
+	}
 }
