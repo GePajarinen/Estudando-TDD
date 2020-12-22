@@ -4,7 +4,7 @@
   <artifactId>Jokenpo</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <name>Jokenpo</name>
-  <properties>
+ <properties>
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
@@ -37,3 +37,5 @@
   </dependencies>
   
 </project>
+  
+  
